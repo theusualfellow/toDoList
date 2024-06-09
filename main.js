@@ -1,15 +1,19 @@
 const button = document.querySelector("#okay")
-const body = document.querySelector("body")
+const task = document.querySelector(".task")
 
 button.addEventListener("click",()=>{
-    const firstTask =  new Task(getTitle(), "this is fun", "high")
+    const firstTask =  new Task(getTitle(), getDescription(), "high")
     firstTask.addTitle()
-
+    firstTask.addDescription()
 })
 
 function getTitle(){
     const title = document.querySelector("#title").value
     return title
+}
+function getDescription(){
+    const description = document.querySelector("#description").value
+    return description
 }
 
 class Task{
@@ -21,10 +25,12 @@ class Task{
     addTitle(){
         const h1 = document.createElement('h1')
         h1.innerText = getTitle()
-        body.appendChild(h1)
+        task.appendChild(h1)
     }
     addDescription(){
-
+        const paragraph = document.createElement('p')
+        paragraph.innerText = getDescription()
+        task.appendChild(paragraph)
     }
     addPriority(){
 
