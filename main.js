@@ -2,9 +2,10 @@ const button = document.querySelector("#okay")
 const task = document.querySelector(".task")
 
 button.addEventListener("click",()=>{
-    const firstTask =  new Task(getTitle(), getDescription(), "high")
+    const firstTask =  new Task(getTitle(), getDescription(), getPriority())
     firstTask.addTitle()
     firstTask.addDescription()
+    firstTask.addPriority()
 })
 
 function getTitle(){
@@ -14,6 +15,10 @@ function getTitle(){
 function getDescription(){
     const description = document.querySelector("#description").value
     return description
+}
+function getPriority(){
+    const priority = document.querySelector("#priority").value
+    return priority
 }
 
 class Task{
@@ -33,6 +38,8 @@ class Task{
         task.appendChild(paragraph)
     }
     addPriority(){
-
+        const priority = document.createElement('h2')
+        priority.innerText= getPriority()
+        task.appendChild(priority)
     }
 }
