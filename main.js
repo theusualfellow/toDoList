@@ -1,11 +1,14 @@
 const button = document.querySelector("#okay")
 const task = document.querySelector(".task")
+const allTasks = []
 
 button.addEventListener("click",()=>{
-    const firstTask =  new Task(getTitle(), getDescription(), getPriority())
-    firstTask.addTitle()
-    firstTask.addDescription()
-    firstTask.addPriority()
+    const addTask =  new Task(getTitle(), getDescription(), getPriority())
+    addTask.addTitle()
+    addTask.addDescription()
+    addTask.addPriority()
+    allTasks.push(addTask)
+    console.log(allTasks)
 })
 
 function getTitle(){
