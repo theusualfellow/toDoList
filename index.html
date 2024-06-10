@@ -15,24 +15,26 @@
 
     <dialog>
         <div class="dialogBox">
-            <button autofocus> close</button>
-            <label for="title">Enter the title here</label>
-            <input type="text" name="title" id="title">
-            <label for="description">Enter the description here</label>
-            <input type="text" name="description" id="description">
-            <fieldset id="priority">
-                <legend>priority</legend>
-                <label for="high">
-                    <input type="radio" name="priority" id="priority1" value="high">High
-                </label>
-                <label for="medium">
-                    <input type="radio" name="priority" id="priority2" value="medium">medium
-                </label>
-                <label for="low">
-                    <input type="radio" name="priority" id="priority3" value="low">Low
-                </label>
-            </fieldset>
-            <button id="okay">Click me</button>
+            <button id="closeDialog"> X</button>
+            <div class="labelContent">
+                <label for="title">Enter the title here</label>
+                <input type="text" name="title" id="title">
+                <label for="description">Enter the description here</label>
+                <input type="text" name="description" id="description">
+                <fieldset id="priority">
+                    <legend>priority</legend>
+                    <label for="high">
+                        <input type="radio" name="priority" id="priority1" value="high">High
+                    </label>
+                    <label for="medium">
+                        <input type="radio" name="priority" id="priority2" value="medium">medium
+                    </label>
+                    <label for="low">
+                        <input type="radio" name="priority" id="priority3" value="low">Low
+                    </label>
+                </fieldset>
+                <button id="okay">Click me</button>
+            </div>
         </div>
        
     </dialog>
