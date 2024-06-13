@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to your to-do List</h1>
+        
+    </div>
+
+    <dialog>
+        <div class="dialogBox">
+            <button id="closeDialog"> X</button>
+            <div class="labelContent">
+                <label for="title">Enter the title here</label>
+                <input type="text" name="title" id="title">
+                <label for="description">Enter the description here</label>
+                <input type="text" name="description" id="description">
+                <fieldset id="priority">
+                    <legend>priority</legend>
+                    <label for="high">
+                        <input type="radio" name="priority" id="priority1" value="high">High
+                    </label>
+                    <label for="medium">
+                        <input type="radio" name="priority" id="priority2" value="medium">medium
+                    </label>
+                    <label for="low">
+                        <input type="radio" name="priority" id="priority3" value="low">Low
+                    </label>
+                </fieldset>
+                <button id="okay">Click me</button>
+            </div>
+        </div>
+       
+    </dialog>
+    <button id="newTask">new Task</button>
+    <div class="allTasks">
+        
+    </div>
+
+
+</body>
+</html>
